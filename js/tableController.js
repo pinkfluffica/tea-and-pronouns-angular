@@ -20,11 +20,15 @@ app.controller ('tableController', function($scope) {
 	console.log($scope.preferences)
 	$scope.doData = function() {
 		var newPerson = {
+			id : $scope.preferences.length + 1, 
 			firstName: $scope.firstName,
+			tea: $scope.tea,
+			pronoun: $scope.pronoun,
+			diet: $scope.diet
 		}
 		$scope.preferences.push(newPerson);
-		
-		console.log($scope.preferences)
+		console.log($scope.preferences);
+
 	}
 	
 });
