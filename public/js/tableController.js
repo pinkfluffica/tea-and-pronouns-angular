@@ -1,22 +1,15 @@
 var preferenceStuff = [
-{
-	id : 1,
-	firstName : "Pippa",
-	tea : "rooibos",
-	pronoun : "she",
-	diet : "no gluten"
-},
-{
-	id: 2,
-	firstName : "Richard",
-	tea : "earl grey",
-	pronoun : "he",
-	diet : "none"
-},
+
 ]
 
-app.controller ('tableController', function($scope) {
-	$scope.preferences = preferenceStuff
+app.controller ('tableController', function($scope, preference) {
+	preference.sayHello();
+	$scope.preferences = preferenceStuff;
+	preference.getAll()
+		.then(function(preferencesData) {
+			$scope.preferences = preferencesData;
+		});
+	
 	console.log($scope.preferences)
 	$scope.doData = function() {
 		var newPerson = {
@@ -26,11 +19,12 @@ app.controller ('tableController', function($scope) {
 			pronoun: $scope.pronoun,
 			diet: $scope.diet
 		}
-		$scope.preferences.push(newPerson);
-		console.log($scope.preferences);
+		preference.saveNewPerson(newPerson);
+		// $scope.preferences.push(newPerson);
+		// console.log($scope.preferences);
 		document.getElementById("new-person").reset();
 		document.getElementById("success-message").className=("success");
-
+		return false;
 	}
 	
 });
