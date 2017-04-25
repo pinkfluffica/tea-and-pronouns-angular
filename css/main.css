@@ -1,11 +1,13 @@
 body {
 	font-family: Helvetica;
-	background-color: grey;
+	/*background-color: grey;*/
 	text-align: center;
+
 }
 
+
 h1 {
-	color: orange;
+	color: #ff9500;
 	font-size: 40px;
 	font-weight: normal;
 }
@@ -15,7 +17,7 @@ h1 {
 }
 
 table {
-	background-color: lightgrey;
+	/*background-color: lightgrey;*/
 	margin: 0 auto;
 }
 
@@ -25,9 +27,41 @@ table {
 thead {
 	font-weight: bold;
 }
+tr {
+	color: #5d5d5d;
+}
+
+form {
+	text-align: left;
+}
+
+.pure-form legend {
+	color: #ff9500;
+	font-size: 40px;
+}
+
+.pure-form-aligned .pure-control-group label {
+	color: #5d5d5d;
+	text-align: left;
+}
+
+.pure-button {
+	color: #5d5d5d;
+}
 
 .add-new {
 	
 	margin-top: 40px;
 	text-align: left;
+}
+
+.hidden {
+	height: 0;
+	opacity: 0;
+}
+.success {
+	border: 2px solid #0aec0a;
+    border-radius: 5px;
+    padding: .5em .6em;
+    color: #5d5d5d;
 }

@@ -28,6 +28,8 @@ app.controller ('tableController', function($scope) {
 		}
 		$scope.preferences.push(newPerson);
 		console.log($scope.preferences);
+		document.getElementById("new-person").reset();
+		document.getElementById("success-message").className=("success");
 
 	}
 	

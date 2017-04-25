@@ -1,13 +1,25 @@
-<form class="pure-form">
+<form class="pure-form pure-form-aligned" id="new-person">
 	<legend>Enter person details</legend>
 	<fieldset>
-
-		<input type='text' placeholder="name" ng-model="firstName"/>
-		<input type="text" placeholder="pronoun" ng-model="pronoun"/> 
-		<input type="text" placeholder="tea" ng-model="tea"/>
-		<input type="text" placeholder="dietary needs" ng-model="diet"/>
-		<button ng-click="doData()" class="pure-button">Click to add</button>
+		<div class="pure-control-group">
+			<label for="first-name">Your name</label>
+			<input type='text' id="first-name" placeholder="name" ng-model="firstName"/>
+		</div>
+		<div class="pure-control-group">
+			<label for="pronoun">Pronoun</label>
+			<input type="text" id="pronoun" placeholder="pronoun" ng-model="pronoun"/> 
+		</div>	
+		<div class="pure-control-group">
+			<label for="tea">Tea</label>
+			<input type="text" id="tea" placeholder="tea" ng-model="tea"/>
+		</div>
+		<div class="pure-control-group">
+			<label for="diet">Diet</label>
+			<input type="text" id="diet" placeholder="dietary needs" ng-model="diet"/>
+		</div>
+		<button ng-click="doData()" class="pure-button">Add me!</button>
+		<p class="hidden" id="success-message">Success! Click the home button to view the list.</p>
 	</fieldset>
 	<a href="#!/" class="pure-button">Home</a>
-	<p>Click the home button to see your name added</p>
+	
 </form>
